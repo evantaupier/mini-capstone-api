@@ -6,16 +6,14 @@ get http://localhost:3000/products/3.json
 
 ###
 
-post http://localhost:3000/products
-Content-Type: application/application/json
-
-###
+post http://localhost:3000/products.json
+Content-Type: application/json
 
 {
-  "name": "nil",
-  "price": "nil",
-  "image_url": "nil",
-  "description": "nil"
+  "name": "Energy Drink",
+  "price": "1",
+  "image_url": "https://images.heb.com/is/image/HEBGrocery/001476509?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0",
+  "description": "AAAAAAAAAAAAAHHHHH"
 }
 
 ###
@@ -28,7 +26,7 @@ Content-Type: application/json
   "name": "Monkeywrench"
 }
 
-### RECIPES DESTROY
+###
 
 delete http://localhost:3000/products/2.json
 
