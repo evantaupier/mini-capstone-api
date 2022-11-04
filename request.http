@@ -1,0 +1,34 @@
+get http://localhost:3000/products.json
+
+###
+
+get http://localhost:3000/products/3.json
+
+###
+
+post http://localhost:3000/products
+Content-Type: application/application/json
+
+###
+
+{
+  "name": "nil",
+  "price": "nil",
+  "image_url": "nil",
+  "description": "nil"
+}
+
+###
+
+patch http://localhost:3000/products/2.json
+Content-Type: application/json
+
+{
+  "price": 7,
+  "name": "Monkeywrench"
+}
+
+### RECIPES DESTROY
+
+delete http://localhost:3000/products/2.json
+
