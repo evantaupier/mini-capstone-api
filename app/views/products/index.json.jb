@@ -1,0 +1,6 @@
+@products.map do |product|
+  {
+    1: product.1,
+    url: product_url(product, format: :json)
+  }
+end
