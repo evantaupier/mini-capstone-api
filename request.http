@@ -10,10 +10,10 @@ post http://localhost:3000/products.json
 Content-Type: application/json
 
 {
-  "name": "Energy Drink",
-  "price": "1",
+  "name": "Abosultely Everything",
+  "price": "100",
   "image_url": "https://images.heb.com/is/image/HEBGrocery/001476509?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0",
-  "description": "AAAAAAAAAAAAAHHHHH"
+  "description": "Woah it looks nothing like an energy drink."
 }
 
 ###
@@ -28,5 +28,5 @@ Content-Type: application/json
 
 ###
 
-delete http://localhost:3000/products/2.json
+delete http://localhost:3000/products/6.json
 
