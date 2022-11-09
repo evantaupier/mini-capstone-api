@@ -21,4 +21,12 @@ class Product < ApplicationRecord
   def total
     return price + tax
   end
+
+  def supplier
+    if supplier_id == 1
+      return Supplier.find 1
+    elsif supplier_id == 2
+      return Supplier.find 2
+    end
+  end
 end

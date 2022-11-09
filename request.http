@@ -18,12 +18,11 @@ Content-Type: application/json
 
 ###
 
-patch http://localhost:3000/products/2.json
+patch http://localhost:3000/products/1.json
 Content-Type: application/json
 
 {
-  "price": 7,
-  "name": "Monkeywrench"
+  "supplier_id": 1
 }
 
 ###
