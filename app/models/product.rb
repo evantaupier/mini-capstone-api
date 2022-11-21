@@ -1,6 +1,14 @@
 class Product < ApplicationRecord
-  validates :name, presence: true, uniqueness: true
-  validates :price, presence: true
+  has_many :category_products
+  has_many :orders
+  has_many :categories, through: :category_products
+  belongs_to :supplier
+  has_many :carted_products
+  # validates :name, presence: true, uniqueness: true
+  # validates :price, presence: true
+
+  # def categories
+  # end
 
   def friendly_created_at
     created_at.strftime("%B %e, %Y")

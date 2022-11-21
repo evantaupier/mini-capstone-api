@@ -1,3 +1,10 @@
+@hostname = api.example.com
+@port = 8080
+@host = {{hostname}}:{{port}}
+@contentType = application/json
+
+###
+
 get http://localhost:3000/products.json
 
 ###
@@ -6,15 +13,29 @@ get http://localhost:3000/products/3.json
 
 ###
 
-post http://localhost:3000/products.json
+get http://localhost:3000/users.json
+
+###
+
+post http://localhost:3000/users.json
+# DO NOT RUN, WILL destroy terminal
 Content-Type: application/json
 
 {
-  "name": "Abosultely Everything",
-  "price": "100",
-  "image_url": "https://images.heb.com/is/image/HEBGrocery/001476509?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0",
-  "description": "Woah it looks nothing like an energy drink."
+  "name": "Eric Taupier",
+  "email": "erictaupier@gmail.com",
+  "password": "password321",
+  "password_confirmation": "password321"
 }
+
+###
+
+post http://localhost:3000/sessions
+
+{
+  
+}
+
 
 ###
 
@@ -27,5 +48,36 @@ Content-Type: application/json
 
 ###
 
-delete http://localhost:3000/products/6.json
+delete http://localhost:3000/products/1.json
 
+###
+
+get http://localhost:3000/orders.json
+
+###
+
+post http://localhost:3000/orders.json
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "product_id": 2,
+  "quantity": 1,
+  "subtotal": 7,
+  "tax": 1,
+  "total": 8
+}
+
+###
+
+delete http://localhost:3000/orders/2.json
+
+###
+
+post http://localhost:3000/carted_products.json
+Content-Type: application/json
+
+{
+  "quantity": 1,
+  "product_id": 1
+}

@@ -1,0 +1,9 @@
+@users.map do |user|
+  {
+    name: user.name,
+    email: user.email,
+    password: user.password,
+    password_confirmation: user.password_confirmation
+    
+  }
+end
